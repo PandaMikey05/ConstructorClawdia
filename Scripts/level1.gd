@@ -32,3 +32,8 @@ func throw():
 func _on_lava_body_entered(body):
 	if body==$Clawdia:
 		get_tree().reload_current_scene()
+
+
+func _on_win_door_body_entered(body):
+	if body==$Clawdia:
+		get_tree().change_scene_to_file("res://Scenes/WinScreenNextLevel.tscn")

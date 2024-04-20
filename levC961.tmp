@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://cvco7052u5kw2"]
 
-[ext_resource type="PackedScene" uid="uid://ubm78q22td44" path="res://Scenes/clawdia.tscn" id="1_cl8id"]
-[ext_resource type="Script" path="res://Scripts/level1.gd" id="1_hcw68"]
-[ext_resource type="PackedScene" path="res://Scenes/WinDoor.tscn" id="2_gct6x"]
+[ext_resource type="PackedScene" uid="uid://ubm78q22td44" path="res://clawdia.tscn" id="1_cl8id"]
+[ext_resource type="Script" path="res://level.gd" id="1_hcw68"]
+[ext_resource type="PackedScene" uid="uid://ds31vcid0l1uk" path="res://WinDoor.tscn" id="2_gct6x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6g1ty"]
 size = Vector2(10000, 10)
@@ -19,10 +19,11 @@ shape = SubResource("RectangleShape2D_6g1ty")
 [node name="Polygon2D" type="Polygon2D" parent="Ground"]
 polygon = PackedVector2Array(0, -5, 1000, -5, 1000, 5, 0, 5)
 
+[node name="RigidBody2D" parent="Ground" instance=ExtResource("2_gct6x")]
+
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Area2D" parent="." instance=ExtResource("2_gct6x")]
-position = Vector2(134, -249)
 
 [node name="Clawdia" parent="." instance=ExtResource("1_cl8id")]
 position = Vector2(71, -99)

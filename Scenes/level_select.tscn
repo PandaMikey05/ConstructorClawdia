@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://csbobi8ijx0dx"]
 
-[ext_resource type="Script" path="res://Scripts/Button.gd" id="1_ll64h"]
+[ext_resource type="Script" path="res://Scripts/Level1Button.gd" id="1_xg02e"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_chjlw"]
 font_size = 101
@@ -30,7 +30,7 @@ offset_top = 131.0
 offset_right = 200.0
 offset_bottom = 331.0
 text = "Level 1"
-script = ExtResource("1_ll64h")
+script = ExtResource("1_xg02e")
 
 [node name="Button2" type="Button" parent="."]
 layout_mode = 0

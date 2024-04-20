@@ -1,13 +1,13 @@
 [gd_scene load_steps=5 format=3 uid="uid://ubm78q22td44"]
 
 [ext_resource type="Script" path="res://Scripts/clawdia.gd" id="1_o56gd"]
-[ext_resource type="Texture2D" uid="uid://bqelncmsdttie" path="res://clawdius.png" id="1_ur50u"]
+[ext_resource type="Texture2D" uid="uid://bqelncmsdttie" path="res://assets/clawdius.png" id="2_ppxxh"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2axyi"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_ur50u")
+"texture": ExtResource("2_ppxxh")
 }],
 "loop": true,
 "name": &"default",
