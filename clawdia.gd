@@ -7,27 +7,12 @@ const JUMP_VELOCITY = -400.0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
-var boxes = Array()
+
 func _ready():
 	pass
-var crate = preload("res://crate.tscn")
 
-func _process(delta):
-	if Input.is_action_just_pressed("Throw"):
-		throw()
-		
 
-func throw():
-	if boxes.size()>= 5: #change to use metadata later
-		boxes[0].queue_free()
-		for i in range (0, boxes.size()/2): 
-			boxes[i]=boxes[boxes.size()-1-i]
-	if(boxes.size()< 5): #change to use metadata later
-		boxes.append(crate.instantiate())
-	else:
-		boxes[boxes.size()-1]=crate.instantiate()
-	boxes[boxes.size()-1].position = Vector2(100,100)
-	add_child(boxes[boxes.size()-1])
+
 	
 		
 func _physics_process(delta):
