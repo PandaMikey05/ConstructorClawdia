@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://ds31vcid0l1uk"]
+
+[ext_resource type="Script" path="res://WinDoor.gd" id="1_ec76m"]
+[ext_resource type="Texture2D" uid="uid://lsdkfx2nybm3" path="res://assets/open_door.png" id="2_e2lbl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pq453"]
+size = Vector2(52, 40)
+
+[node name="Area2D" type="Area2D"]
+collision_layer = 17
+script = ExtResource("1_ec76m")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(295.5, 156)
+scale = Vector2(0.177704, 0.214516)
+texture = ExtResource("2_e2lbl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(297, 158)
+shape = SubResource("RectangleShape2D_pq453")

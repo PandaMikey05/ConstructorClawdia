@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqelncmsdttie"
-path="res://.godot/imported/clawdius.png-9b0a0ab43691026d42dfa10fc32b3747.ctex"
+uid="uid://lsdkfx2nybm3"
+path="res://.godot/imported/open_door.png-75b534a73b291184ade9be0f57fc9a5e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://clawdius.png"
-dest_files=["res://.godot/imported/clawdius.png-9b0a0ab43691026d42dfa10fc32b3747.ctex"]
+source_file="res://assets/open_door.png"
+dest_files=["res://.godot/imported/open_door.png-75b534a73b291184ade9be0f57fc9a5e.ctex"]
 
 [params]
 
