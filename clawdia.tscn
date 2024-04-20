@@ -19,6 +19,7 @@ size = Vector2(1000, 1000)
 
 [node name="Clawdia" type="CharacterBody2D"]
 script = ExtResource("1_vnnh5")
+metadata/maxBoxes = 5
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_2axyi")
