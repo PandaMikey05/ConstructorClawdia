@@ -1,3 +1,27 @@
-[gd_scene format=3 uid="uid://ubm78q22td44"]
+[gd_scene load_steps=5 format=3 uid="uid://ubm78q22td44"]
+
+[ext_resource type="Texture2D" uid="uid://bqelncmsdttie" path="res://clawdius.png" id="1_ur50u"]
+[ext_resource type="Script" path="res://clawdia.gd" id="1_vnnh5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2axyi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ur50u")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_76jiu"]
+size = Vector2(1000, 1000)
 
 [node name="Clawdia" type="CharacterBody2D"]
+script = ExtResource("1_vnnh5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_2axyi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_76jiu")

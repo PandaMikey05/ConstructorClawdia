@@ -1,3 +1,23 @@
-[gd_scene format=3 uid="uid://cvco7052u5kw2"]
+[gd_scene load_steps=3 format=3 uid="uid://cvco7052u5kw2"]
+
+[ext_resource type="PackedScene" uid="uid://ubm78q22td44" path="res://clawdia.tscn" id="1_cl8id"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6g1ty"]
+size = Vector2(10000, 10)
 
 [node name="Level" type="Node2D"]
+
+[node name="Ground" type="StaticBody2D" parent="."]
+position = Vector2(0, 258)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+shape = SubResource("RectangleShape2D_6g1ty")
+
+[node name="Polygon2D" type="Polygon2D" parent="Ground"]
+polygon = PackedVector2Array(0, -5, 1000, -5, 1000, 5, 0, 5)
+
+[node name="Clawdia" parent="." instance=ExtResource("1_cl8id")]
+position = Vector2(71, -99)
+scale = Vector2(0.135, 0.135)
+
+[node name="Camera2D" type="Camera2D" parent="."]
