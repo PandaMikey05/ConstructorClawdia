@@ -9,7 +9,7 @@ func _process(delta):
 	if Input.is_action_just_pressed("Throw"):
 		throw()
 		
-var throwforce = 500 #force with which the box gets thrown
+var throwforce = 300 #force with which the box gets thrown
 var boxes = Array() #holds the box object
 var crate = preload("res://crate.tscn") 
 func throw():
@@ -22,6 +22,6 @@ func throw():
 	else:
 		boxes[boxes.size()-1]=crate.instantiate() 
 	boxes[boxes.size()-1].position = $Clawdia.position+Vector2(100,-100)
-	#boxes[boxes[boxes.size()-1]].apply_impulse(Vector2(throwforce, -throwforce))
+	boxes[boxes.size()-1].apply_impulse(Vector2(throwforce, -throwforce*1.5))
 	add_child(boxes[boxes.size()-1])
 	
