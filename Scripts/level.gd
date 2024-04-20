@@ -11,7 +11,7 @@ func _process(delta):
 		
 var throwforce = 300 #force with which the box gets thrown
 var boxes = Array() #holds the box object
-var crate = preload("res://crate.tscn") 
+var crate = preload("res://Scenes/crate.tscn") 
 func throw():
 	if boxes.size()>= 5: #change to use metadata later
 		boxes[0].queue_free()
@@ -21,7 +21,7 @@ func throw():
 		boxes.append(crate.instantiate())
 	else:
 		boxes[boxes.size()-1]=crate.instantiate() 
-	boxes[boxes.size()-1].position = $Clawdia.position+Vector2(100,-100)
+	boxes[boxes.size()-1].position = $Clawdia.position+Vector2(150,-100)
 	boxes[boxes.size()-1].apply_impulse(Vector2(throwforce, -throwforce*1.5))
 	add_child(boxes[boxes.size()-1])
 	

@@ -1,14 +1,14 @@
 [gd_scene load_steps=5 format=3 uid="uid://cvco7052u5kw2"]
 
-[ext_resource type="PackedScene" uid="uid://ubm78q22td44" path="res://clawdia.tscn" id="1_cl8id"]
-[ext_resource type="Script" path="res://level.gd" id="1_hcw68"]
-[ext_resource type="PackedScene" uid="uid://d2di8thb68yqv" path="res://lava.tscn" id="3_fwklm"]
+[ext_resource type="Script" path="res://Scripts/level.gd" id="1_vf0ng"]
+[ext_resource type="PackedScene" uid="uid://ubm78q22td44" path="res://Scenes/clawdia.tscn" id="2_2qfga"]
+[ext_resource type="PackedScene" uid="uid://d2di8thb68yqv" path="res://Scenes/lava.tscn" id="3_dj4he"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6g1ty"]
 size = Vector2(10000, 10)
 
 [node name="Level" type="Node2D"]
-script = ExtResource("1_hcw68")
+script = ExtResource("1_vf0ng")
 
 [node name="Ground" type="StaticBody2D" parent="."]
 position = Vector2(0, 258)
@@ -19,12 +19,12 @@ shape = SubResource("RectangleShape2D_6g1ty")
 [node name="Polygon2D" type="Polygon2D" parent="Ground"]
 polygon = PackedVector2Array(0, -5, 1000, -5, 1000, 5, 0, 5)
 
-[node name="Clawdia" parent="." instance=ExtResource("1_cl8id")]
+[node name="Clawdia" parent="." instance=ExtResource("2_2qfga")]
 position = Vector2(71, -99)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="lava" parent="." instance=ExtResource("3_fwklm")]
+[node name="lava" parent="." instance=ExtResource("3_dj4he")]
 position = Vector2(322, 175)
 
 [connection signal="body_entered" from="lava" to="." method="_on_lava_body_entered"]

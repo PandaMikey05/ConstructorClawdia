@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://ubm78q22td44"]
 
+[ext_resource type="Script" path="res://Scripts/clawdia.gd" id="1_o56gd"]
 [ext_resource type="Texture2D" uid="uid://bqelncmsdttie" path="res://clawdius.png" id="1_ur50u"]
-[ext_resource type="Script" path="res://clawdia.gd" id="1_vnnh5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2axyi"]
 animations = [{
@@ -19,7 +19,7 @@ size = Vector2(1000, 1000)
 
 [node name="Clawdia" type="CharacterBody2D"]
 scale = Vector2(0.135, 0.135)
-script = ExtResource("1_vnnh5")
+script = ExtResource("1_o56gd")
 metadata/maxBoxes = 5
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
