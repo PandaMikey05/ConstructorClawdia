@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://cdd5macn42hit"]
+[gd_scene load_steps=4 format=3 uid="uid://cdd5macn42hit"]
 
 [ext_resource type="Texture2D" uid="uid://20nwl02knirm" path="res://assets/Next_Level.png" id="1_c3ode"]
+[ext_resource type="Script" path="res://Button.gd" id="2_lmsnb"]
+[ext_resource type="Script" path="res://Button2.gd" id="2_mq55u"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -19,6 +21,7 @@ offset_right = 851.0
 offset_bottom = 543.0
 text = "Next Level
 "
+script = ExtResource("2_lmsnb")
 
 [node name="Button2" type="Button" parent="."]
 offset_left = 294.0
@@ -26,3 +29,4 @@ offset_top = 476.0
 offset_right = 448.0
 offset_bottom = 539.0
 text = "Quit"
+script = ExtResource("2_mq55u")

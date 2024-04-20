@@ -25,4 +25,5 @@ func throw():
 	boxes[boxes.size()-1].apply_impulse(Vector2(throwforce, -throwforce*1.5))
 	add_child(boxes[boxes.size()-1])
 	
-
+#if body.name == "player":
+		#get_tree().reload_current_scene()

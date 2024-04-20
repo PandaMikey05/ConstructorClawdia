@@ -19,10 +19,11 @@ shape = SubResource("RectangleShape2D_6g1ty")
 [node name="Polygon2D" type="Polygon2D" parent="Ground"]
 polygon = PackedVector2Array(0, -5, 1000, -5, 1000, 5, 0, 5)
 
+[node name="RigidBody2D" parent="Ground" instance=ExtResource("2_gct6x")]
+
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Area2D" parent="." instance=ExtResource("2_gct6x")]
-position = Vector2(134, -249)
 
 [node name="Clawdia" parent="." instance=ExtResource("1_cl8id")]
 position = Vector2(71, -99)
