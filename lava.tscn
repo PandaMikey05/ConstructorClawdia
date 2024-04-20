@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2di8thb68yqv"]
+
+[ext_resource type="Script" path="res://lava.gd" id="1_d1w0f"]
+
+[node name="Lava" type="Area2D"]
+script = ExtResource("1_d1w0f")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
+script = PackedVector2Array(-20, -10, 10, -10, 10, 10, -10, 10)
