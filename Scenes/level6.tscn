@@ -26,6 +26,7 @@ position = Vector2(-1022, 291)
 zoom = Vector2(0.53, 0.53)
 
 [node name="barrier" type="StaticBody2D" parent="Camera2D"]
+position = Vector2(36, 8)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Camera2D/barrier"]
 polygon = PackedVector2Array(-1155, 689, -1144, -635, 1135, -635, 1151, 711, 1128, 714, 1108, -617, -1132, -633)
