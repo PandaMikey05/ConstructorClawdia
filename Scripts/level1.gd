@@ -12,6 +12,7 @@ func _process(delta):
 var throwforce = 300 #force with which the box gets thrown
 var boxes = Array() #holds the box object
 var crate = preload("res://Scenes/crate.tscn") 
+
 func throw():
 	var facing = $Clawdia.FacingRight
 	var modifier = 1
@@ -38,6 +39,20 @@ func _on_lava_body_entered(body):
 		get_tree().reload_current_scene()
 
 
-func _on_win_door_body_entered(body):
-	if body==$Clawdia:
-		get_tree().change_scene_to_file("res://Scenes/WinScreenNextLevel.tscn")
+#func _on_win_door_body_entered(body):
+	#if body==$Clawdia:
+		#get_tree().change_scene_to_file("res://Scenes/WinScreenNextLevel.tscn")
+
+var WinDoor = preload("res://Scenes/WinDoor.tscn")
+var door
+var LockedDoor = preload("res://Scenes/locked_door.tscn")
+
+func _on_key_body_entered(body):
+	if body == $Clawdia:
+		door = WinDoor.instantiate()
+		door.position = $LockedDoor.position
+		$LockedDoor.queue_free()
+		$key.queue_free()
+		add_child(door)
+		
+		

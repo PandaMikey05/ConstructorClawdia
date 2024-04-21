@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://oh4vnmiyvbxn"]
+
+[ext_resource type="Script" path="res://Scripts/key.gd" id="1_yomcv"]
+[ext_resource type="Texture2D" uid="uid://b873nmw4ip0nk" path="res://assets/key.png" id="2_moyj3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m74c4"]
+size = Vector2(20, 50)
+
+[node name="key" type="Area2D"]
+script = ExtResource("1_yomcv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(118.25, 222.25)
+scale = Vector2(0.15, 0.0771605)
+texture = ExtResource("2_moyj3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(123, 224)
+shape = SubResource("RectangleShape2D_m74c4")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
