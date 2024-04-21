@@ -13,6 +13,10 @@ var throwforce = 300 #force with which the box gets thrown
 var boxes = Array() #holds the box object
 var crate = preload("res://Scenes/crate.tscn") 
 func throw():
+	var facing = $Clawdia.FacingRight
+	var modifier = 1
+	if !facing:
+		modifier = -1
 	if boxes.size()>= 5: #change to use metadata later
 		boxes[0].queue_free()
 		for i in range (0, boxes.size()-1): 
@@ -21,8 +25,8 @@ func throw():
 		boxes.append(crate.instantiate())
 	else:
 		boxes[boxes.size()-1]=crate.instantiate() 
-	boxes[boxes.size()-1].position = $Clawdia.position+Vector2(150,-100)
-	boxes[boxes.size()-1].apply_impulse(Vector2(throwforce, -throwforce*1.5))
+	boxes[boxes.size()-1].position = $Clawdia.position+Vector2(modifier*150,-100)
+	boxes[boxes.size()-1].apply_impulse(Vector2(modifier*throwforce, -throwforce*1.5))
 	add_child(boxes[boxes.size()-1])
 	
 #if body.name == "player":

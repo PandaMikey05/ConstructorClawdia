@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://cvco7052u5kw2"]
+
+[ext_resource type="Script" path="res://Scripts/level1.gd" id="1_y38pm"]
+[ext_resource type="PackedScene" uid="uid://ubm78q22td44" path="res://Scenes/clawdia.tscn" id="2_vyyac"]
+[ext_resource type="PackedScene" uid="uid://d2di8thb68yqv" path="res://Scenes/lava.tscn" id="3_g50hw"]
+[ext_resource type="PackedScene" uid="uid://ds31vcid0l1uk" path="res://Scenes/WinDoor.tscn" id="4_umj2s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6g1ty"]
+size = Vector2(10000, 10)
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_y38pm")
+
+[node name="Ground" type="StaticBody2D" parent="."]
+position = Vector2(0, 258)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+shape = SubResource("RectangleShape2D_6g1ty")
+
+[node name="Polygon2D" type="Polygon2D" parent="Ground"]
+polygon = PackedVector2Array(0, -5, 1000, -5, 1000, 5, 0, 5)
+
+[node name="WinDoor" parent="." instance=ExtResource("4_umj2s")]
+position = Vector2(-218, 162)
+
+[node name="Clawdia" parent="." instance=ExtResource("2_vyyac")]
+position = Vector2(71, -99)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="lava" parent="." instance=ExtResource("3_g50hw")]
+position = Vector2(322, 175)
+
+[node name="CollisionPolygon2D" parent="lava" index="1"]
+polygon = PackedVector2Array(237, 59, 267, 3, 213, 6, 206, 50)
+
+[connection signal="body_entered" from="WinDoor" to="." method="_on_win_door_body_entered"]
+[connection signal="body_entered" from="lava" to="." method="_on_lava_body_entered"]
+
+[editable path="lava"]
