@@ -1,79 +1,42 @@
-[gd_scene load_steps=7 format=3 uid="uid://cvco7052u5kw2"]
+[gd_scene load_steps=6 format=3 uid="uid://cvco7052u5kw2"]
 
-[ext_resource type="Script" path="res://Scripts/level1.gd" id="1_y38pm"]
-[ext_resource type="PackedScene" uid="uid://ubm78q22td44" path="res://Scenes/clawdia.tscn" id="2_vyyac"]
-[ext_resource type="PackedScene" uid="uid://d2di8thb68yqv" path="res://Scenes/lava.tscn" id="3_g50hw"]
-[ext_resource type="PackedScene" uid="uid://ds31vcid0l1uk" path="res://Scenes/WinDoor.tscn" id="4_umj2s"]
-[ext_resource type="PackedScene" uid="uid://fjpt5jcsasm6" path="res://Scenes/sand.tscn" id="5_38pgf"]
-[ext_resource type="Texture2D" uid="uid://rroho1usgydp" path="res://assets/level_6.png" id="5_wul8y"]
+[ext_resource type="Script" path="res://Scripts/level1.gd" id="1_ymwt3"]
+[ext_resource type="Texture2D" uid="uid://rroho1usgydp" path="res://assets/level_6.png" id="2_s21hk"]
+[ext_resource type="PackedScene" uid="uid://ubm78q22td44" path="res://Scenes/clawdia.tscn" id="3_pxj77"]
+[ext_resource type="PackedScene" uid="uid://ds31vcid0l1uk" path="res://Scenes/WinDoor.tscn" id="4_qpkr0"]
+[ext_resource type="PackedScene" uid="uid://cnu70jdij4kyu" path="res://Scenes/sandpoly.tscn" id="5_2hsgl"]
 
 [node name="Level" type="Node2D"]
-script = ExtResource("1_y38pm")
+script = ExtResource("1_ymwt3")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -1151.0
-offset_top = -638.0
-offset_right = 1087.0
-offset_bottom = 670.0
-texture = ExtResource("5_wul8y")
+offset_left = -1122.0
+offset_top = -696.0
+offset_right = 1116.0
+offset_bottom = 612.0
+texture = ExtResource("2_s21hk")
 expand_mode = 3
 
-[node name="Clawdia" parent="." instance=ExtResource("2_vyyac")]
+[node name="Clawdia" parent="." instance=ExtResource("3_pxj77")]
 position = Vector2(-1022, 291)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.53, 0.53)
 
-[node name="WinDoor" parent="." instance=ExtResource("4_umj2s")]
-position = Vector2(813, 363)
+[node name="barrier" type="StaticBody2D" parent="Camera2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Camera2D/barrier"]
+polygon = PackedVector2Array(-1155, 689, -1144, -635, 1135, -635, 1151, 711, 1128, 714, 1108, -617, -1132, -633)
+
+[node name="WinDoor" parent="." instance=ExtResource("4_qpkr0")]
+position = Vector2(220, 59)
 
 [node name="Ground" type="Node2D" parent="."]
 
-[node name="Sand" parent="Ground" instance=ExtResource("5_38pgf")]
-position = Vector2(-1023, 461)
+[node name="SandPoly" parent="." instance=ExtResource("5_2hsgl")]
+position = Vector2(-895, 491)
 
-[node name="Sand2" parent="Ground" instance=ExtResource("5_38pgf")]
-position = Vector2(-888, 528)
+[node name="CollisionPolygon2D" parent="SandPoly" index="1"]
+polygon = PackedVector2Array(-268, 231, -261, -162, 15, -143, 698, 8, 789, 15, 951, 19, 1195, 7, 1623, -62, 1906, -143, 2031, -825, 2149, 247, 62, 230, -85, 225)
 
-[node name="Sand3" parent="Ground" instance=ExtResource("5_38pgf")]
-position = Vector2(-1031, 588)
-
-[node name="Sand4" parent="Ground" instance=ExtResource("5_38pgf")]
-position = Vector2(-781, 597)
-
-[node name="Sand5" parent="Ground" instance=ExtResource("5_38pgf")]
-position = Vector2(-523, 554)
-
-[node name="Sand6" parent="Ground" instance=ExtResource("5_38pgf")]
-position = Vector2(-384, 548)
-
-[node name="Sand7" parent="Ground" instance=ExtResource("5_38pgf")]
-position = Vector2(-540, 582)
-
-[node name="Sand8" parent="Ground" instance=ExtResource("5_38pgf")]
-position = Vector2(-181, 606)
-
-[node name="Sand9" parent="Ground" instance=ExtResource("5_38pgf")]
-position = Vector2(62, 608)
-
-[node name="Sand10" parent="Ground" instance=ExtResource("5_38pgf")]
-position = Vector2(304, 623)
-
-[node name="Sand11" parent="Ground" instance=ExtResource("5_38pgf")]
-position = Vector2(554, 613)
-
-[node name="Sand12" parent="Ground" instance=ExtResource("5_38pgf")]
-position = Vector2(761, 573)
-
-[node name="Sand13" parent="Ground" instance=ExtResource("5_38pgf")]
-position = Vector2(1013, 573)
-
-[node name="lava" parent="." instance=ExtResource("3_g50hw")]
-position = Vector2(-182, 467)
-
-[node name="CollisionPolygon2D" parent="lava" index="1"]
-polygon = PackedVector2Array(747, 205, 431, 3, -90, -14, -107, 220)
-
-[connection signal="body_entered" from="lava" to="." method="_on_lava_body_entered"]
-
-[editable path="lava"]
+[editable path="SandPoly"]

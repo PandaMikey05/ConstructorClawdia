@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://cg8wt0xommv4f"]
+[gd_scene load_steps=5 format=3 uid="uid://cg8wt0xommv4f"]
 
 [ext_resource type="Script" path="res://Scripts/crate.gd" id="1_3ul45"]
 [ext_resource type="Texture2D" uid="uid://ce5np1o7avmtg" path="res://assets/box.png" id="2_f0kp3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jb7v3"]
 size = Vector2(100, 100)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0n4g2"]
+font_size = 36
 
 [node name="Crate" type="RigidBody2D"]
 script = ExtResource("1_3ul45")
@@ -16,3 +19,11 @@ shape = SubResource("RectangleShape2D_jb7v3")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.145, 0.145)
 texture = ExtResource("2_f0kp3")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -10.0
+offset_top = -27.0
+offset_right = 30.0
+offset_bottom = 23.0
+text = "5"
+label_settings = SubResource("LabelSettings_0n4g2")

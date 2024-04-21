@@ -1,21 +1,21 @@
 [gd_scene load_steps=7 format=3 uid="uid://cvco7052u5kw2"]
 
 [ext_resource type="Script" path="res://Scripts/level1.gd" id="1_y38pm"]
+[ext_resource type="Texture2D" uid="uid://bw22skvu8uprh" path="res://assets/level_7.png" id="2_s454r"]
 [ext_resource type="PackedScene" uid="uid://ubm78q22td44" path="res://Scenes/clawdia.tscn" id="2_vyyac"]
 [ext_resource type="PackedScene" uid="uid://d2di8thb68yqv" path="res://Scenes/lava.tscn" id="3_g50hw"]
 [ext_resource type="PackedScene" uid="uid://6u1alj0ifmwl" path="res://Scenes/final_door.tscn" id="4_lllo0"]
 [ext_resource type="PackedScene" uid="uid://fjpt5jcsasm6" path="res://Scenes/sand.tscn" id="5_38pgf"]
-[ext_resource type="Texture2D" uid="uid://rroho1usgydp" path="res://assets/level_6.png" id="5_wul8y"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_y38pm")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -1151.0
-offset_top = -638.0
-offset_right = 1087.0
-offset_bottom = 670.0
-texture = ExtResource("5_wul8y")
+offset_left = -1133.0
+offset_top = -773.0
+offset_right = 1105.0
+offset_bottom = 535.0
+texture = ExtResource("2_s454r")
 expand_mode = 3
 
 [node name="Clawdia" parent="." instance=ExtResource("2_vyyac")]
@@ -26,6 +26,11 @@ zoom = Vector2(0.53, 0.53)
 
 [node name="FinalDoor" parent="Camera2D" instance=ExtResource("4_lllo0")]
 position = Vector2(-226, 254)
+
+[node name="barrier" type="StaticBody2D" parent="Camera2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Camera2D/barrier"]
+polygon = PackedVector2Array(-1155, 689, -1144, -635, 1135, -635, 1151, 711, 1128, 714, 1108, -617, -1132, -633)
 
 [node name="Ground" type="Node2D" parent="."]
 
@@ -75,20 +80,23 @@ position = Vector2(-632, 428)
 position = Vector2(-386, 304)
 
 [node name="Sand16" parent="Ground" instance=ExtResource("5_38pgf")]
-position = Vector2(80, 50)
+position = Vector2(80, 56)
 
 [node name="Sand17" parent="Ground" instance=ExtResource("5_38pgf")]
 position = Vector2(978, 542)
 rotation = 0.261799
 
 [node name="Sand18" parent="Ground" instance=ExtResource("5_38pgf")]
-position = Vector2(298, 46)
+position = Vector2(298, 56)
 
 [node name="Sand19" parent="Ground" instance=ExtResource("5_38pgf")]
 position = Vector2(-638, 174)
 
 [node name="Sand20" parent="Ground" instance=ExtResource("5_38pgf")]
-position = Vector2(-774, 462)
+position = Vector2(-774, 461)
+
+[node name="Sand21" parent="Ground" instance=ExtResource("5_38pgf")]
+position = Vector2(-638, 375)
 
 [node name="lava" parent="." instance=ExtResource("3_g50hw")]
 position = Vector2(-182, 467)

@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://cvco7052u5kw2"]
 
 [ext_resource type="Script" path="res://Scripts/level1.gd" id="1_y38pm"]
+[ext_resource type="Texture2D" uid="uid://6tx1bqxxpgfe" path="res://assets/8.png" id="2_1uqcq"]
 [ext_resource type="PackedScene" uid="uid://ubm78q22td44" path="res://Scenes/clawdia.tscn" id="2_vyyac"]
 [ext_resource type="PackedScene" uid="uid://d2di8thb68yqv" path="res://Scenes/lava.tscn" id="3_g50hw"]
 [ext_resource type="PackedScene" uid="uid://fjpt5jcsasm6" path="res://Scenes/sand.tscn" id="5_38pgf"]
-[ext_resource type="Texture2D" uid="uid://rroho1usgydp" path="res://assets/level_6.png" id="5_wul8y"]
-[ext_resource type="PackedScene" uid="uid://tjw72j21dvro" path="res://Scenes/locked_door.tscn" id="6_lejtq"]
+[ext_resource type="PackedScene" path="res://Scenes/locked_door.tscn" id="6_lejtq"]
 [ext_resource type="PackedScene" uid="uid://oh4vnmiyvbxn" path="res://Scenes/key.tscn" id="7_ja200"]
 
 [node name="Level" type="Node2D"]
@@ -16,7 +16,7 @@ offset_left = -1151.0
 offset_top = -638.0
 offset_right = 1087.0
 offset_bottom = 670.0
-texture = ExtResource("5_wul8y")
+texture = ExtResource("2_1uqcq")
 expand_mode = 3
 
 [node name="Clawdia" parent="." instance=ExtResource("2_vyyac")]
@@ -24,6 +24,11 @@ position = Vector2(-1050, -167)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.53, 0.53)
+
+[node name="barrier" type="StaticBody2D" parent="Camera2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Camera2D/barrier"]
+polygon = PackedVector2Array(-1155, 689, -1144, -635, 1135, -635, 1151, 711, 1128, 714, 1108, -617, -1132, -633)
 
 [node name="lava" parent="." instance=ExtResource("3_g50hw")]
 position = Vector2(-182, 467)
@@ -38,7 +43,7 @@ polygon = PackedVector2Array(1282, 204, 1255, 9, -90, -14, -107, 220)
 position = Vector2(426, 200)
 
 [node name="Sand3" parent="Ground" instance=ExtResource("5_38pgf")]
-position = Vector2(181, -53)
+position = Vector2(181, -46)
 
 [node name="Sand4" parent="Ground" instance=ExtResource("5_38pgf")]
 position = Vector2(-608, 159)
@@ -50,7 +55,7 @@ position = Vector2(-401, 488)
 position = Vector2(437, 424)
 
 [node name="Sand7" parent="Ground" instance=ExtResource("5_38pgf")]
-position = Vector2(-1041, 23)
+position = Vector2(-1041, 26)
 
 [node name="Sand8" parent="Ground" instance=ExtResource("5_38pgf")]
 position = Vector2(178, 630)
@@ -77,7 +82,7 @@ position = Vector2(407, -46)
 position = Vector2(226, 433)
 
 [node name="Sand16" parent="Ground" instance=ExtResource("5_38pgf")]
-position = Vector2(-807, 23)
+position = Vector2(-807, 26)
 
 [node name="Sand17" parent="Ground" instance=ExtResource("5_38pgf")]
 position = Vector2(-390, 26)
@@ -86,7 +91,7 @@ position = Vector2(-390, 26)
 position = Vector2(179, 194)
 
 [node name="Sand19" parent="Ground" instance=ExtResource("5_38pgf")]
-position = Vector2(-570, 25)
+position = Vector2(-570, 26)
 
 [node name="Sand20" parent="Ground" instance=ExtResource("5_38pgf")]
 position = Vector2(-398, 272)
