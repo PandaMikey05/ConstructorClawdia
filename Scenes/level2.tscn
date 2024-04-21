@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://ubm78q22td44" path="res://Scenes/clawdia.tscn" id="2_vyyac"]
 [ext_resource type="PackedScene" uid="uid://d2di8thb68yqv" path="res://Scenes/lava.tscn" id="3_g50hw"]
 [ext_resource type="PackedScene" uid="uid://ds31vcid0l1uk" path="res://Scenes/WinDoor.tscn" id="4_umj2s"]
-[ext_resource type="PackedScene" uid="uid://fjpt5jcsasm6" path="res://Scenes/sand.tscn" id="5_38pgf"]
 [ext_resource type="Texture2D" uid="uid://rroho1usgydp" path="res://assets/level_6.png" id="5_wul8y"]
+[ext_resource type="PackedScene" uid="uid://cnu70jdij4kyu" path="res://Scenes/sandpoly.tscn" id="6_3xeas"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_y38pm")
@@ -29,44 +29,11 @@ position = Vector2(813, 363)
 
 [node name="Ground" type="Node2D" parent="."]
 
-[node name="Sand" parent="Ground" instance=ExtResource("5_38pgf")]
-position = Vector2(-1023, 461)
+[node name="SandPoly" parent="." instance=ExtResource("6_3xeas")]
+position = Vector2(-895, 491)
 
-[node name="Sand2" parent="Ground" instance=ExtResource("5_38pgf")]
-position = Vector2(-888, 528)
-
-[node name="Sand3" parent="Ground" instance=ExtResource("5_38pgf")]
-position = Vector2(-1031, 588)
-
-[node name="Sand4" parent="Ground" instance=ExtResource("5_38pgf")]
-position = Vector2(-781, 597)
-
-[node name="Sand5" parent="Ground" instance=ExtResource("5_38pgf")]
-position = Vector2(-523, 554)
-
-[node name="Sand6" parent="Ground" instance=ExtResource("5_38pgf")]
-position = Vector2(-384, 548)
-
-[node name="Sand7" parent="Ground" instance=ExtResource("5_38pgf")]
-position = Vector2(-540, 582)
-
-[node name="Sand8" parent="Ground" instance=ExtResource("5_38pgf")]
-position = Vector2(-181, 606)
-
-[node name="Sand9" parent="Ground" instance=ExtResource("5_38pgf")]
-position = Vector2(62, 608)
-
-[node name="Sand10" parent="Ground" instance=ExtResource("5_38pgf")]
-position = Vector2(304, 623)
-
-[node name="Sand11" parent="Ground" instance=ExtResource("5_38pgf")]
-position = Vector2(554, 613)
-
-[node name="Sand12" parent="Ground" instance=ExtResource("5_38pgf")]
-position = Vector2(761, 573)
-
-[node name="Sand13" parent="Ground" instance=ExtResource("5_38pgf")]
-position = Vector2(1013, 573)
+[node name="CollisionPolygon2D" parent="SandPoly" index="1"]
+polygon = PackedVector2Array(-268, 231, -261, -162, 15, -143, 698, 8, 1314, 4, 1544, -45, 1986, -45, 2005, 231)
 
 [node name="lava" parent="." instance=ExtResource("3_g50hw")]
 position = Vector2(-182, 467)
@@ -76,4 +43,5 @@ polygon = PackedVector2Array(747, 205, 431, 3, -90, -14, -107, 220)
 
 [connection signal="body_entered" from="lava" to="." method="_on_lava_body_entered"]
 
+[editable path="SandPoly"]
 [editable path="lava"]

@@ -6,6 +6,7 @@
 size = Vector2(250, 250)
 
 [node name="Sand" type="StaticBody2D"]
+texture_repeat = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_mttip")

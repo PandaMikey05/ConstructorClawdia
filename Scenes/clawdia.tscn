@@ -53,6 +53,9 @@ size = Vector2(750, 500)
 
 [node name="Clawdia" type="CharacterBody2D"]
 scale = Vector2(0.135, 0.135)
+floor_stop_on_slope = false
+floor_max_angle = 1.36659
+floor_snap_length = 10.0
 script = ExtResource("1_o56gd")
 metadata/maxBoxes = 5
 metadata/FacingRight = true

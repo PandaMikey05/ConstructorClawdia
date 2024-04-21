@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnu70jdij4kyu"]
+
+[ext_resource type="Script" path="res://Scripts/sandpoly.gd" id="1_8h7o4"]
+[ext_resource type="Texture2D" uid="uid://cuvnbslwhqraa" path="res://assets/sand.png" id="2_rh2yi"]
+
+[node name="SandPoly" type="StaticBody2D"]
+script = ExtResource("1_8h7o4")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+texture_repeat = 2
+texture = ExtResource("2_rh2yi")
+polygon = PackedVector2Array(0, 0, 250, 0, 250, -15)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(0, 0, 250, 0, 250, -15)
