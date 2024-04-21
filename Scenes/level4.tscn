@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" path="res://Scenes/locked_door.tscn" id="5_ykqh5"]
 [ext_resource type="PackedScene" uid="uid://oh4vnmiyvbxn" path="res://Scenes/key.tscn" id="6_bry3s"]
 
-[node name="Level" type="Node2D"]
+[node name="Level2" type="Node2D"]
 script = ExtResource("1_y38pm")
 
 [node name="TextureRect" type="TextureRect" parent="."]

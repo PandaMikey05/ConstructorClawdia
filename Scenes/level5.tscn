@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" path="res://Scenes/locked_door.tscn" id="6_lejtq"]
 [ext_resource type="PackedScene" uid="uid://oh4vnmiyvbxn" path="res://Scenes/key.tscn" id="7_ja200"]
 
-[node name="Level" type="Node2D"]
+[node name="Level2" type="Node2D"]
 script = ExtResource("1_y38pm")
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -113,6 +113,12 @@ position = Vector2(-485, -4)
 
 [node name="Sand2" parent="Ground/Sand21/Sand2/Sand2/Sand2/Sand2" instance=ExtResource("5_38pgf")]
 position = Vector2(237, 14)
+
+[node name="Sand22" parent="Ground" instance=ExtResource("5_38pgf")]
+position = Vector2(-608, 231)
+
+[node name="Sand23" parent="Ground" instance=ExtResource("5_38pgf")]
+position = Vector2(-855, 420)
 
 [node name="LockedDoor" parent="." instance=ExtResource("6_lejtq")]
 position = Vector2(947, -343)

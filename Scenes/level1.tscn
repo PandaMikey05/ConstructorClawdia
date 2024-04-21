@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ds31vcid0l1uk" path="res://Scenes/WinDoor.tscn" id="4_qpkr0"]
 [ext_resource type="PackedScene" uid="uid://cnu70jdij4kyu" path="res://Scenes/sandpoly.tscn" id="5_2hsgl"]
 
-[node name="Level" type="Node2D"]
+[node name="Level2" type="Node2D"]
 script = ExtResource("1_ymwt3")
 
 [node name="TextureRect" type="TextureRect" parent="."]

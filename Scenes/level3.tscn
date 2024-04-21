@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" path="res://Scenes/locked_door.tscn" id="6_wkpr8"]
 [ext_resource type="PackedScene" uid="uid://oh4vnmiyvbxn" path="res://Scenes/key.tscn" id="7_fe628"]
 
-[node name="Level" type="Node2D"]
+[node name="Level2" type="Node2D"]
 script = ExtResource("1_y38pm")
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -81,7 +81,7 @@ polygon = PackedVector2Array(-639, 612, -895, 520, -899, 336, -511, 416, -295, 4
 position = Vector2(-182, 467)
 
 [node name="CollisionPolygon2D" parent="lava" index="1"]
-polygon = PackedVector2Array(747, 205, 431, 3, -90, -14, -107, 220)
+polygon = PackedVector2Array(743, 24, 431, 3, -90, -14, -107, 220, 733, 176)
 
 [node name="LockedDoor" parent="." instance=ExtResource("6_wkpr8")]
 position = Vector2(1020, 135)
