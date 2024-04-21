@@ -25,7 +25,7 @@ position = Vector2(-1022, 291)
 zoom = Vector2(0.53, 0.53)
 
 [node name="FinalDoor" parent="Camera2D" instance=ExtResource("4_lllo0")]
-position = Vector2(-226, 254)
+position = Vector2(-226, 284)
 
 [node name="barrier" type="StaticBody2D" parent="Camera2D"]
 
