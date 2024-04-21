@@ -19,7 +19,7 @@ offset_left = 670.0
 offset_top = 467.0
 offset_right = 851.0
 offset_bottom = 543.0
-text = "Back to Level Slect"
+text = "Back to Level Select"
 script = ExtResource("2_tou74")
 
 [node name="Button2" type="Button" parent="."]

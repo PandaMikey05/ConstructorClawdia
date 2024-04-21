@@ -32,7 +32,7 @@ position = Vector2(71, -99)
 position = Vector2(322, 175)
 
 [node name="CollisionPolygon2D" parent="lava" index="1"]
-polygon = PackedVector2Array(191, 42, -41, -118, -107, -20, -97, 78)
+polygon = PackedVector2Array(237, 59, 267, 3, 213, 6, 206, 50)
 
 [connection signal="body_entered" from="WinDoor" to="." method="_on_win_door_body_entered"]
 [connection signal="body_entered" from="lava" to="." method="_on_lava_body_entered"]

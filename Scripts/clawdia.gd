@@ -13,7 +13,12 @@ func _ready():
 
 
 
-	
+func _process(delta):
+	if Input.is_action_just_pressed("Left") || Input.is_action_just_pressed("Right"):
+		$AnimatedSprite2D.animation = "scuttle"
+		$AnimatedSprite2D.play()
+	elif !Input.is_action_pressed("Left") && !Input.is_action_pressed("Right") :
+		$AnimatedSprite2D.animation = "default"
 		
 func _physics_process(delta):
 	# Add the gravity.

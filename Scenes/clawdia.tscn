@@ -1,7 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://ubm78q22td44"]
+[gd_scene load_steps=9 format=3 uid="uid://ubm78q22td44"]
 
 [ext_resource type="Script" path="res://Scripts/clawdia.gd" id="1_o56gd"]
 [ext_resource type="Texture2D" uid="uid://bqelncmsdttie" path="res://assets/clawdius.png" id="2_ppxxh"]
+[ext_resource type="Texture2D" uid="uid://y8lmb7tqm6kq" path="res://assets/scuttling_clawdio_1.png" id="3_x0fh8"]
+[ext_resource type="Texture2D" uid="uid://c8ly3anb4v54t" path="res://assets/scuttling_clawdio_2.png" id="4_4qp7x"]
+[ext_resource type="Texture2D" uid="uid://deb882622octs" path="res://assets/scuttling_clawdio_3.png" id="5_tj5nu"]
+[ext_resource type="Texture2D" uid="uid://bqq5vr2edot2j" path="res://assets/scuttling_clawdio_5.png" id="6_l8f7i"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2axyi"]
 animations = [{
@@ -12,6 +16,23 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_x0fh8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_4qp7x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_tj5nu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_l8f7i")
+}],
+"loop": true,
+"name": &"scuttle",
+"speed": 10.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_76jiu"]
@@ -21,9 +42,12 @@ size = Vector2(1000, 1000)
 scale = Vector2(0.135, 0.135)
 script = ExtResource("1_o56gd")
 metadata/maxBoxes = 5
+metadata/FacingRight = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_2axyi")
+animation = &"scuttle"
+frame_progress = 0.198071
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_76jiu")
