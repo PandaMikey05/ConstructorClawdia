@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://ubm78q22td44" path="res://Scenes/clawdia.tscn" id="1_cl8id"]
 [ext_resource type="Script" path="res://Scripts/level1.gd" id="1_hcw68"]
-[ext_resource type="PackedScene" path="res://Scenes/WinDoor.tscn" id="2_gct6x"]
+[ext_resource type="PackedScene" uid="uid://ds31vcid0l1uk" path="res://Scenes/WinDoor.tscn" id="2_gct6x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6g1ty"]
 size = Vector2(10000, 10)

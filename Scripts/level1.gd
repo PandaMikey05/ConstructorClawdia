@@ -3,7 +3,9 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	var key = get_node("key")
+	if key != null: #if there is a key in the level
+		key.key_obtained.connect(self._update_door) #get ready to get key signal
 
 func _process(delta):
 	if Input.is_action_just_pressed("Throw"):
@@ -38,21 +40,14 @@ func _on_lava_body_entered(body):
 	if body==$Clawdia:
 		get_tree().reload_current_scene()
 
-
-#func _on_win_door_body_entered(body):
-	#if body==$Clawdia:
-		#get_tree().change_scene_to_file("res://Scenes/WinScreenNextLevel.tscn")
-
 var WinDoor = preload("res://Scenes/WinDoor.tscn")
 var door
 var LockedDoor = preload("res://Scenes/locked_door.tscn")
-
-func _on_key_body_entered(body):
-	if body == $Clawdia:
-		door = WinDoor.instantiate()
-		door.position = $LockedDoor.position
-		$LockedDoor.queue_free()
-		$key.queue_free()
-		add_child(door)
 		
+#function that "unlocks" the door
+func _update_door(): 
+	door = WinDoor.instantiate()
+	door.position = $LockedDoor.position
+	$LockedDoor.queue_free()
+	add_child(door)
 		

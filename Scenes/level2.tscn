@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://cvco7052u5kw2"]
+[gd_scene load_steps=6 format=3 uid="uid://cvco7052u5kw2"]
 
 [ext_resource type="Script" path="res://Scripts/level1.gd" id="1_y38pm"]
 [ext_resource type="PackedScene" uid="uid://ubm78q22td44" path="res://Scenes/clawdia.tscn" id="2_vyyac"]
-[ext_resource type="PackedScene" uid="uid://d2di8thb68yqv" path="res://Scenes/lava.tscn" id="3_g50hw"]
 [ext_resource type="PackedScene" uid="uid://ds31vcid0l1uk" path="res://Scenes/WinDoor.tscn" id="4_umj2s"]
 [ext_resource type="Texture2D" uid="uid://rroho1usgydp" path="res://assets/level_6.png" id="5_wul8y"]
 [ext_resource type="PackedScene" uid="uid://cnu70jdij4kyu" path="res://Scenes/sandpoly.tscn" id="6_3xeas"]
@@ -11,10 +10,10 @@
 script = ExtResource("1_y38pm")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -1151.0
-offset_top = -638.0
-offset_right = 1087.0
-offset_bottom = 670.0
+offset_left = -967.0
+offset_top = -530.0
+offset_right = 1271.0
+offset_bottom = 778.0
 texture = ExtResource("5_wul8y")
 expand_mode = 3
 
@@ -25,7 +24,7 @@ position = Vector2(-1022, 291)
 zoom = Vector2(0.53, 0.53)
 
 [node name="WinDoor" parent="." instance=ExtResource("4_umj2s")]
-position = Vector2(813, 363)
+position = Vector2(220, 59)
 
 [node name="Ground" type="Node2D" parent="."]
 
@@ -33,15 +32,6 @@ position = Vector2(813, 363)
 position = Vector2(-895, 491)
 
 [node name="CollisionPolygon2D" parent="SandPoly" index="1"]
-polygon = PackedVector2Array(-268, 231, -261, -162, 15, -143, 698, 8, 1314, 4, 1544, -45, 1986, -45, 2005, 231)
-
-[node name="lava" parent="." instance=ExtResource("3_g50hw")]
-position = Vector2(-182, 467)
-
-[node name="CollisionPolygon2D" parent="lava" index="1"]
-polygon = PackedVector2Array(747, 205, 431, 3, -90, -14, -107, 220)
-
-[connection signal="body_entered" from="lava" to="." method="_on_lava_body_entered"]
+polygon = PackedVector2Array(-268, 231, -261, -162, 15, -143, 698, 8, 789, 15, 951, 19, 1195, 7, 1580, 37, 1852, 17, 2137, -9, 2149, 247, 0, 0, 0, 0)
 
 [editable path="SandPoly"]
-[editable path="lava"]
