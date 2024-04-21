@@ -28,19 +28,19 @@ zoom = Vector2(0.53, 0.53)
 [node name="Ground" type="Node2D" parent="."]
 
 [node name="Sand" parent="Ground" instance=ExtResource("5_38pgf")]
-position = Vector2(-1023, 461)
+position = Vector2(-967, 464)
 
 [node name="Sand2" parent="Ground" instance=ExtResource("5_38pgf")]
-position = Vector2(-888, 528)
+position = Vector2(-960, 587)
 
 [node name="Sand3" parent="Ground" instance=ExtResource("5_38pgf")]
-position = Vector2(-1031, 588)
+position = Vector2(-791, 577)
 
 [node name="Sand4" parent="Ground" instance=ExtResource("5_38pgf")]
-position = Vector2(-781, 597)
+position = Vector2(-744, 461)
 
 [node name="Sand5" parent="Ground" instance=ExtResource("5_38pgf")]
-position = Vector2(-523, 554)
+position = Vector2(-512, 447)
 
 [node name="Sand6" parent="Ground" instance=ExtResource("5_38pgf")]
 position = Vector2(-384, 548)
@@ -51,23 +51,8 @@ position = Vector2(-540, 582)
 [node name="Sand8" parent="Ground" instance=ExtResource("5_38pgf")]
 position = Vector2(-194, 568)
 
-[node name="Sand9" parent="Ground" instance=ExtResource("5_38pgf")]
-position = Vector2(62, 608)
-
-[node name="Sand10" parent="Ground" instance=ExtResource("5_38pgf")]
-position = Vector2(304, 623)
-
-[node name="Sand11" parent="Ground" instance=ExtResource("5_38pgf")]
-position = Vector2(554, 613)
-
-[node name="Sand12" parent="Ground" instance=ExtResource("5_38pgf")]
-position = Vector2(761, 573)
-
-[node name="Sand13" parent="Ground" instance=ExtResource("5_38pgf")]
-position = Vector2(1013, 573)
-
 [node name="Sand14" parent="Ground" instance=ExtResource("5_38pgf")]
-position = Vector2(-934, -10)
+position = Vector2(-966, -18)
 
 [node name="Sand15" parent="Ground" instance=ExtResource("5_38pgf")]
 position = Vector2(-417, 201)
@@ -85,24 +70,30 @@ position = Vector2(-203, 200)
 position = Vector2(-1118, -235)
 
 [node name="Sand20" parent="Ground" instance=ExtResource("5_38pgf")]
-position = Vector2(1169, -245)
+position = Vector2(1126, -242)
 
 [node name="Sand21" parent="Ground" instance=ExtResource("5_38pgf")]
 position = Vector2(-9, 207)
+
+[node name="Sand9" parent="Ground" instance=ExtResource("5_38pgf")]
+position = Vector2(-281, 443)
+
+[node name="Sand10" parent="Ground" instance=ExtResource("5_38pgf")]
+position = Vector2(-166, 437)
 
 [node name="lava" parent="." instance=ExtResource("3_g50hw")]
 position = Vector2(-182, 467)
 
 [node name="Polygon2D" parent="lava" index="0"]
 position = Vector2(550, 52)
-polygon = PackedVector2Array(786, 128, 765, -112, -1525, -126, -1534, 99)
+polygon = PackedVector2Array(781, 178, 762, -139, -1440, -147, -1448, 184)
 
 [node name="CollisionPolygon2D" parent="lava" index="1"]
-position = Vector2(-470, -87)
-polygon = PackedVector2Array(1806, 251, 1785, 19, -431, 11, -473, 235)
+position = Vector2(-470, -97)
+polygon = PackedVector2Array(1798, 325, 1785, 19, -431, -1, -423, 327)
 
 [node name="LockedDoor" parent="." instance=ExtResource("6_3qlry")]
-position = Vector2(940, -441)
+position = Vector2(1068, -444)
 
 [node name="key" parent="." instance=ExtResource("7_vu1eg")]
 position = Vector2(-1008, -643)

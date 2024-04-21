@@ -110,7 +110,7 @@ position = Vector2(-485, -4)
 position = Vector2(237, 14)
 
 [node name="LockedDoor" parent="." instance=ExtResource("6_lejtq")]
-position = Vector2(1016, -343)
+position = Vector2(947, -343)
 
 [node name="key" parent="." instance=ExtResource("7_ja200")]
 position = Vector2(-424, -690)

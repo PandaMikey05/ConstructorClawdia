@@ -1,21 +1,21 @@
 [gd_scene load_steps=4 format=3 uid="uid://6u1alj0ifmwl"]
 
-[ext_resource type="Texture2D" uid="uid://lsdkfx2nybm3" path="res://assets/open_door.png" id="1_0u8kk"]
 [ext_resource type="Script" path="res://Scripts/final_door.gd" id="1_oojf3"]
+[ext_resource type="Texture2D" uid="uid://cfirf7gvqhu0v" path="res://assets/ocean_door.png" id="2_p2qk2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o8byn"]
-size = Vector2(55, 101)
+size = Vector2(117, 132)
 
 [node name="FinalDoor" type="Area2D"]
 script = ExtResource("1_oojf3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(73.25, 82.875)
-scale = Vector2(0.138521, 0.141667)
-texture = ExtResource("1_0u8kk")
+position = Vector2(74.5, 86)
+scale = Vector2(0.248619, 0.254902)
+texture = ExtResource("2_p2qk2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(81, 87)
+position = Vector2(75.5, 109)
 shape = SubResource("RectangleShape2D_o8byn")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
