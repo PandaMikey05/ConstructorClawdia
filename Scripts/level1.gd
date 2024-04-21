@@ -25,7 +25,7 @@ func throw():
 		boxes.append(crate.instantiate())
 	else:
 		boxes[boxes.size()-1]=crate.instantiate() 
-	boxes[boxes.size()-1].position = $Clawdia.position+Vector2(modifier*150,-100)
+	boxes[boxes.size()-1].position = $Clawdia.position+Vector2(modifier*100,-100)
 	boxes[boxes.size()-1].apply_impulse(Vector2(modifier*throwforce, -throwforce*1.5))
 	add_child(boxes[boxes.size()-1])
 	

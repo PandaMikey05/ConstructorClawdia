@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://ubm78q22td44"]
 
 [ext_resource type="Script" path="res://Scripts/clawdia.gd" id="1_o56gd"]
-[ext_resource type="Texture2D" uid="uid://bqelncmsdttie" path="res://assets/clawdius.png" id="2_ppxxh"]
 [ext_resource type="Texture2D" uid="uid://oikma87v37xu" path="res://assets/ClawdiaScuttlingSpriteSheet.png" id="3_fv02d"]
+[ext_resource type="Texture2D" uid="uid://y8lmb7tqm6kq" path="res://assets/scuttling_clawdio_1.png" id="3_x0fh8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rkjg6"]
 atlas = ExtResource("3_fv02d")
@@ -24,7 +24,7 @@ region = Rect2(754, 518, 754, 518)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_ppxxh")
+"texture": ExtResource("3_x0fh8")
 }],
 "loop": true,
 "name": &"default",
@@ -59,8 +59,7 @@ metadata/FacingRight = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_2axyi")
-animation = &"scuttle"
-frame_progress = 0.955259
+frame_progress = 0.708234
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_76jiu")
