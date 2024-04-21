@@ -4,11 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://lsdkfx2nybm3" path="res://assets/open_door.png" id="2_e2lbl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pq453"]
-size = Vector2(52, 40)
+size = Vector2(83, 146)
 
 [node name="WinDoor" type="Area2D"]
 collision_layer = 17
 script = ExtResource("1_ec76m")
+metadata/locked = false
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-1.50009, -2.25006)
@@ -16,5 +17,7 @@ scale = Vector2(0.177704, 0.214516)
 texture = ExtResource("2_e2lbl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-9.15527e-05, -0.250061)
+position = Vector2(2.5, 7)
 shape = SubResource("RectangleShape2D_pq453")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

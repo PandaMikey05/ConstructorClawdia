@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://tjw72j21dvro"]
+
+[ext_resource type="Texture2D" uid="uid://bmewsovo7lsng" path="res://assets/background_clear_locked_door_png.png" id="1_ux7ee"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7gh5p"]
+
+[node name="LockedDoor" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_7gh5p")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(18, 0)
+scale = Vector2(0.203125, 0.191208)
+texture = ExtResource("1_ux7ee")
